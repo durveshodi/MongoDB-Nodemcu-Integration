@@ -8,8 +8,8 @@
 ESP8266WiFiMulti WiFiMulti;
 MongoDB MongoDB;
 
-String url = "https://data.mongodb-api.com/app/data-okora/endpoint/data/v1";
-String api = "nlXJI6iJVPHMJDRCA1WrcTX2kEWx1wVZxtv2nkw9Sk76NSzKbdnv1TDCQchPWOzA";
+String url = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+String api = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
       
 
 
@@ -31,25 +31,19 @@ void setup() {
 }
 
 void loop() {
-  /*
-  MongoDB.insertOne("AtlasCluster" , "sample_guides" ,"planets2", payload);
-  Serial.println("");
+
+  Serial.println(" MongoDB.findOne("AtlasCluster" , "sample_guides" ,"Client","{\"age\":\"22\"}");");
+  delay(2000);
+  
+  Serial.println("MongoDB.updateOne("AtlasCluster" , "sample_guides" ,"planets2","{\"age\":\"22\"}","{\"name\":\"DURVESH\",\"age\":\"40\"}");");
+  delay(2000);
+                                                                                   
+  Serial.println(MongoDB.inserOne("AtlasCluster" , "mongo_test" ,"planets2","{\"name\":\"Durvesh\"}) );
   delay(2000);
 
-  MongoDB.findOne("AtlasCluster" , "sample_guides" ,"planets2","{\"age\":\"22\"}");
-  Serial.println("");
-  delay(2000);
-
-  MongoDB.updateOne("AtlasCluster" , "sample_guides" ,"planets2","{\"age\":\"22\"}","{\"name\":\"bhargav\",\"age\":\"40\"}");
-  Serial.println("");
-  delay(2000);
-*/
-  MongoDB.findMany("AtlasCluster" , "sample_guides" ,"planets2","{\"name\":\"bhargav\"}");
-  Serial.println(MongoDB.insertMany("AtlasCluster" , "mongo_test" ,"planets2","{{\"name\":\"bhargav\"},{\"name\":\"Durvesh\"}}") );
-  delay(2000);
-/*/
-  MongoDB.deleteOne("AtlasCluster" , "sample_guides" ,"planets2", "{\"name\":\"bhargav\"}");
-  Serial.println("");
-  delay(10000);
-*/
+  Serial.println("MongoDB.deleteOne("AtlasCluster" , "sample_guides" ,"planets2", "{\"name\":\"bhargav\"}");");
+  delay(20000);
+      
+   Serial.println(MongoDB.findMany("AtlasCluster" , "sample_guides" ,"planets2","{\"name\":\"bhargav\"}"));
+   delay(10000);
 }
