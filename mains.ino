@@ -7,7 +7,7 @@
 
 // Update these values with your MongoDB connection details
 const char* WIFI_SSID = "WIFI 2";
-const char* WIFI_PASSWORD = "odedara21";
+const char* WIFI_PASSWORD = "xxxx";
 const char* MONGODB_API_URL = "https://data.mongodb-api.com/app/data-okora/endpoint/data/v1";
 const char* MONGODB_API_KEY = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
 
